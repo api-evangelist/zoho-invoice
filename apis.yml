@@ -1,0 +1,59 @@
+aid: zoho-invoice
+name: Zoho Invoice
+description: >-
+  Zoho Invoice is a cloud-based invoicing application for small businesses
+  and freelancers that supports customer management, estimates, invoices,
+  recurring billing, expense tracking, time tracking, and online payment
+  collection. The Zoho Invoice REST API provides full CRUD access to
+  organizations, contacts, items, invoices, estimates, credit notes, expenses,
+  projects, time entries, and customer payments. Authentication uses OAuth
+  2.0 with region-specific data center domains (.com, .eu, .in, .com.au, .jp,
+  .ca, .com.cn, .sa).
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Invoicing
+  - Accounting
+  - Small Business
+  - Billing
+  - Expense Tracking
+  - SaaS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/zoho-invoice/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: zoho-invoice:api
+    name: Zoho Invoice API
+    description: >-
+      REST API for managing organizations, contacts, items, invoices,
+      estimates, credit notes, recurring invoices, expenses, projects, time
+      entries, and customer payments. Authentication is OAuth 2.0 with
+      Organization ID header and region-specific data center domains.
+    humanURL: https://www.zoho.com/invoice/api/v3/introduction
+    baseURL: https://www.zohoapis.com/invoice/v3
+    tags:
+      - Invoicing
+      - Billing
+      - Accounting
+    properties:
+      - type: Documentation
+        url: https://www.zoho.com/invoice/api/v3/introduction
+      - type: OAuth Overview
+        url: https://www.zoho.com/invoice/api/v3/oauth/
+
+common:
+  - type: Website
+    url: https://www.zoho.com/invoice
+  - type: Documentation
+    url: https://www.zoho.com/invoice/api/v3
+  - type: Pricing
+    url: https://www.zoho.com/invoice/pricing.html
+  - type: Sign Up
+    url: https://www.zoho.com/invoice/signup
+  - type: Developer Console
+    url: https://api-console.zoho.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
