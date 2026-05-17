@@ -50,7 +50,7 @@ common:
     url: https://www.zoho.com/invoice/api/v3
   - type: Pricing
     url: https://www.zoho.com/invoice/pricing.html
-  - type: Sign Up
+  - type: SignUp
     url: https://www.zoho.com/invoice/signup
   - type: Developer Console
     url: https://api-console.zoho.com
