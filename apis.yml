@@ -44,6 +44,8 @@ apis:
         url: https://www.zoho.com/invoice/api/v3/oauth/
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/zoho
   - type: Website
     url: https://www.zoho.com/invoice
   - type: Documentation
