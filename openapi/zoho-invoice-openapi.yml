@@ -1,0 +1,260 @@
+openapi: 3.1.0
+info:
+  title: Zoho Invoice API
+  description: REST API for Zoho Invoice, covering contacts, invoices, estimates, and credit notes.
+  version: v3
+servers:
+  - url: https://www.zohoapis.com/invoice/v3
+    description: Production (US data center; regional domains include .eu, .in, .com.au, .jp, .ca, .com.cn, .sa)
+security:
+  - ZohoOAuth: []
+paths:
+  /organizations:
+    get:
+      summary: List organizations
+      operationId: listOrganizations
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an organization
+      operationId: createOrganization
+      responses:
+        '201':
+          description: Created
+  /contacts:
+    get:
+      summary: List contacts
+      operationId: listContacts
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a contact
+      operationId: createContact
+      responses:
+        '201':
+          description: Created
+  /contacts/{contact_id}:
+    parameters:
+      - name: contact_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve a contact
+      operationId: getContact
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update a contact
+      operationId: updateContact
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete a contact
+      operationId: deleteContact
+      responses:
+        '200':
+          description: OK
+  /contacts/{contact_id}/portal:
+    post:
+      summary: Enable portal access for a contact
+      operationId: enableContactPortal
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /invoices:
+    get:
+      summary: List invoices
+      operationId: listInvoices
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an invoice
+      operationId: createInvoice
+      responses:
+        '201':
+          description: Created
+  /invoices/{invoice_id}:
+    parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve an invoice
+      operationId: getInvoice
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update an invoice
+      operationId: updateInvoice
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete an invoice
+      operationId: deleteInvoice
+      responses:
+        '200':
+          description: OK
+  /invoices/{invoice_id}/send:
+    post:
+      summary: Mark invoice as sent
+      operationId: markInvoiceSent
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /invoices/{invoice_id}/void:
+    post:
+      summary: Void an invoice
+      operationId: voidInvoice
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /invoices/{invoice_id}/email:
+    post:
+      summary: Email an invoice
+      operationId: emailInvoice
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /invoices/{invoice_id}/payments:
+    get:
+      summary: List payments applied to an invoice
+      operationId: listInvoicePayments
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Apply a payment to an invoice
+      operationId: applyInvoicePayment
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Created
+  /estimates:
+    get:
+      summary: List estimates
+      operationId: listEstimates
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create an estimate
+      operationId: createEstimate
+      responses:
+        '201':
+          description: Created
+  /estimates/{estimate_id}:
+    parameters:
+      - name: estimate_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve an estimate
+      operationId: getEstimate
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update an estimate
+      operationId: updateEstimate
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete an estimate
+      operationId: deleteEstimate
+      responses:
+        '200':
+          description: OK
+  /credit-notes:
+    get:
+      summary: List credit notes
+      operationId: listCreditNotes
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a credit note
+      operationId: createCreditNote
+      responses:
+        '201':
+          description: Created
+  /credit-notes/{creditnote_id}:
+    parameters:
+      - name: creditnote_id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retrieve a credit note
+      operationId: getCreditNote
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update a credit note
+      operationId: updateCreditNote
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: Delete a credit note
+      operationId: deleteCreditNote
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: OAuth 2.0 access token sent as 'Authorization: Zoho-oauthtoken {access_token}'. An Organization ID header is also required.
