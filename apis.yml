@@ -10,7 +10,7 @@ description: >-
   2.0 with region-specific data center domains (.com, .eu, .in, .com.au, .jp,
   .ca, .com.cn, .sa).
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Invoicing
   - Accounting
