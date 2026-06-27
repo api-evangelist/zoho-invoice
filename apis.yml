@@ -52,9 +52,9 @@ common:
     url: https://www.zoho.com/invoice/api/v3
   - type: Pricing
     url: https://www.zoho.com/invoice/pricing.html
-  - type: SignUp
+  - type: Signup
     url: https://www.zoho.com/invoice/signup
-  - type: Developer Console
+  - type: Console
     url: https://api-console.zoho.com
 maintainers:
   - FN: Kin Lane
