@@ -44,6 +44,10 @@ apis:
         url: https://www.zoho.com/invoice/api/v3/oauth/
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/zoho-invoice-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/zoho-invoice-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/zoho
   - type: Website
@@ -56,6 +60,8 @@ common:
     url: https://www.zoho.com/invoice/signup
   - type: Console
     url: https://api-console.zoho.com
+  - url: https://www.zoho.com/invoice/blog/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
