@@ -35,25 +35,73 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: zoho-invoice:api
-    name: Zoho Invoice API
-    description: >-
-      REST API for managing organizations, contacts, items, invoices,
-      estimates, credit notes, recurring invoices, expenses, projects, time
-      entries, and customer payments. Authentication is OAuth 2.0 with
-      Organization ID header and region-specific data center domains.
-    humanURL: https://www.zoho.com/invoice/api/v3/introduction
-    baseURL: https://www.zohoapis.com/invoice/v3
-    tags:
-      - Invoicing
-      - Billing
-      - Accounting
-    properties:
-      - type: Documentation
-        url: https://www.zoho.com/invoice/api/v3/introduction
-      - type: OAuth Overview
-        url: https://www.zoho.com/invoice/api/v3/oauth/
-
+- aid: zoho-invoice:api
+  name: Zoho Invoice API
+  description: >-
+    REST API for managing organizations, contacts, items, invoices, estimates, credit notes, recurring
+    invoices, expenses, projects, time entries, and customer payments. Authentication is OAuth 2.0 with
+    Organization ID header and region-specific data center domains.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Invoicing
+  - Billing
+  - Accounting
+  properties:
+  - type: Documentation
+    url: https://www.zoho.com/invoice/api/v3/introduction
+  - type: OAuth Overview
+    url: https://www.zoho.com/invoice/api/v3/oauth/
+- aid: zoho-invoice:zoho-invoice-contacts-api
+  name: Zoho Invoice Contacts API
+  description: The Contacts API from Zoho Invoice — 3 operation(s) for contacts.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-invoice-contacts-api-openapi.yml
+- aid: zoho-invoice:zoho-invoice-credit-notes-api
+  name: Zoho Invoice Credit Notes API
+  description: The Credit Notes API from Zoho Invoice — 2 operation(s) for credit notes.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Credit Notes
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-invoice-credit-notes-api-openapi.yml
+- aid: zoho-invoice:zoho-invoice-estimates-api
+  name: Zoho Invoice Estimates API
+  description: The Estimates API from Zoho Invoice — 2 operation(s) for estimates.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Estimates
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-invoice-estimates-api-openapi.yml
+- aid: zoho-invoice:zoho-invoice-invoices-api
+  name: Zoho Invoice Invoices API
+  description: The Invoices API from Zoho Invoice — 6 operation(s) for invoices.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-invoice-invoices-api-openapi.yml
+- aid: zoho-invoice:zoho-invoice-organizations-api
+  name: Zoho Invoice Organizations API
+  description: The Organizations API from Zoho Invoice — 1 operation(s) for organizations.
+  humanURL: https://www.zoho.com/invoice/api/v3/introduction
+  baseURL: https://www.zohoapis.com/invoice/v3
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/zoho-invoice-organizations-api-openapi.yml
 common:
   - type: VulnerabilityDisclosure
     url: security/zoho-invoice-vulnerability-disclosure.yml
