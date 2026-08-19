@@ -1,0 +1,142 @@
+openapi: 3.2.0
+info:
+  title: Zoho Invoice Invoices API
+  description: REST API for Zoho Invoice, covering contacts, invoices, estimates, and credit notes.
+  version: v3
+servers:
+- url: https://www.zohoapis.com/invoice/v3
+  description: Production (US data center; regional domains include .eu, .in, .com.au, .jp, .ca, .com.cn, .sa)
+security:
+- ZohoOAuth: []
+tags:
+- name: Invoices
+paths:
+  /invoices:
+    get:
+      summary: List invoices
+      operationId: listInvoices
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+    post:
+      summary: Create an invoice
+      operationId: createInvoice
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Invoices
+  /invoices/{invoice_id}:
+    parameters:
+    - name: invoice_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve an invoice
+      operationId: getInvoice
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+    put:
+      summary: Update an invoice
+      operationId: updateInvoice
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+    delete:
+      summary: Delete an invoice
+      operationId: deleteInvoice
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+  /invoices/{invoice_id}/send:
+    post:
+      summary: Mark invoice as sent
+      operationId: markInvoiceSent
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+  /invoices/{invoice_id}/void:
+    post:
+      summary: Void an invoice
+      operationId: voidInvoice
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+  /invoices/{invoice_id}/email:
+    post:
+      summary: Email an invoice
+      operationId: emailInvoice
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+  /invoices/{invoice_id}/payments:
+    get:
+      summary: List payments applied to an invoice
+      operationId: listInvoicePayments
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Invoices
+    post:
+      summary: Apply a payment to an invoice
+      operationId: applyInvoicePayment
+      parameters:
+      - name: invoice_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Invoices
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'OAuth 2.0 access token sent as ''Authorization: Zoho-oauthtoken {access_token}''. An Organization ID header is also required.'

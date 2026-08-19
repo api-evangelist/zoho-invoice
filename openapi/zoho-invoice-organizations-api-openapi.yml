@@ -1,0 +1,37 @@
+openapi: 3.2.0
+info:
+  title: Zoho Invoice Organizations API
+  description: REST API for Zoho Invoice, covering contacts, invoices, estimates, and credit notes.
+  version: v3
+servers:
+- url: https://www.zohoapis.com/invoice/v3
+  description: Production (US data center; regional domains include .eu, .in, .com.au, .jp, .ca, .com.cn, .sa)
+security:
+- ZohoOAuth: []
+tags:
+- name: Organizations
+paths:
+  /organizations:
+    get:
+      summary: List organizations
+      operationId: listOrganizations
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Organizations
+    post:
+      summary: Create an organization
+      operationId: createOrganization
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Organizations
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'OAuth 2.0 access token sent as ''Authorization: Zoho-oauthtoken {access_token}''. An Organization ID header is also required.'

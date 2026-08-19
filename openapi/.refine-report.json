@@ -1,0 +1,29 @@
+{
+  "provider": "zoho-invoice",
+  "sources": [
+    "zoho-invoice-contacts-api-openapi.yml",
+    "zoho-invoice-credit-notes-api-openapi.yml",
+    "zoho-invoice-estimates-api-openapi.yml",
+    "zoho-invoice-invoices-api-openapi.yml",
+    "zoho-invoice-organizations-api-openapi.yml"
+  ],
+  "outputs": [
+    "zoho-invoice-contacts-api-openapi.yml",
+    "zoho-invoice-credit-notes-api-openapi.yml",
+    "zoho-invoice-estimates-api-openapi.yml",
+    "zoho-invoice-invoices-api-openapi.yml",
+    "zoho-invoice-organizations-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "zoho-invoice-contacts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-invoice-credit-notes-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-invoice-estimates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-invoice-invoices-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-invoice-organizations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}

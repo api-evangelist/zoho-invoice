@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zoho Invoice Credit Notes API",
+    "version": "v3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Credit Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List credit notes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zohoapis.com/invoice/v3/credit-notes"
+          },
+          "docs": "List credit notes"
+        },
+        {
+          "info": {
+            "name": "Create a credit note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/credit-notes"
+          },
+          "docs": "Create a credit note"
+        },
+        {
+          "info": {
+            "name": "Retrieve a credit note",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zohoapis.com/invoice/v3/credit-notes/:creditnote_id",
+            "params": [
+              {
+                "name": "creditnote_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a credit note"
+        },
+        {
+          "info": {
+            "name": "Update a credit note",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.zohoapis.com/invoice/v3/credit-notes/:creditnote_id",
+            "params": [
+              {
+                "name": "creditnote_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a credit note"
+        },
+        {
+          "info": {
+            "name": "Delete a credit note",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.zohoapis.com/invoice/v3/credit-notes/:creditnote_id",
+            "params": [
+              {
+                "name": "creditnote_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a credit note"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

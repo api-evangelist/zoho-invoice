@@ -1,0 +1,192 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zoho Invoice Invoices API",
+    "version": "v3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices"
+          },
+          "docs": "List invoices"
+        },
+        {
+          "info": {
+            "name": "Create an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices"
+          },
+          "docs": "Create an invoice"
+        },
+        {
+          "info": {
+            "name": "Retrieve an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve an invoice"
+        },
+        {
+          "info": {
+            "name": "Update an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an invoice"
+        },
+        {
+          "info": {
+            "name": "Delete an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an invoice"
+        },
+        {
+          "info": {
+            "name": "Mark invoice as sent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id/send",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark invoice as sent"
+        },
+        {
+          "info": {
+            "name": "Void an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id/void",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Void an invoice"
+        },
+        {
+          "info": {
+            "name": "Email an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id/email",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Email an invoice"
+        },
+        {
+          "info": {
+            "name": "List payments applied to an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id/payments",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List payments applied to an invoice"
+        },
+        {
+          "info": {
+            "name": "Apply a payment to an invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.zohoapis.com/invoice/v3/invoices/:invoice_id/payments",
+            "params": [
+              {
+                "name": "invoice_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Apply a payment to an invoice"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

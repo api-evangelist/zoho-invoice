@@ -1,0 +1,68 @@
+openapi: 3.2.0
+info:
+  title: Zoho Invoice Estimates API
+  description: REST API for Zoho Invoice, covering contacts, invoices, estimates, and credit notes.
+  version: v3
+servers:
+- url: https://www.zohoapis.com/invoice/v3
+  description: Production (US data center; regional domains include .eu, .in, .com.au, .jp, .ca, .com.cn, .sa)
+security:
+- ZohoOAuth: []
+tags:
+- name: Estimates
+paths:
+  /estimates:
+    get:
+      summary: List estimates
+      operationId: listEstimates
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Estimates
+    post:
+      summary: Create an estimate
+      operationId: createEstimate
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Estimates
+  /estimates/{estimate_id}:
+    parameters:
+    - name: estimate_id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Retrieve an estimate
+      operationId: getEstimate
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Estimates
+    put:
+      summary: Update an estimate
+      operationId: updateEstimate
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Estimates
+    delete:
+      summary: Delete an estimate
+      operationId: deleteEstimate
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Estimates
+components:
+  securitySchemes:
+    ZohoOAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'OAuth 2.0 access token sent as ''Authorization: Zoho-oauthtoken {access_token}''. An Organization ID header is also required.'
