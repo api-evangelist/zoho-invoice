@@ -28,6 +28,13 @@ tags:
   - Small Business
   - Billing
   - Expense Tracking
+  - Software-as-a-Service
+tags_raw:
+  - Invoicing
+  - Accounting
+  - Small Business
+  - Billing
+  - Expense Tracking
   - SaaS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/zoho-invoice/refs/heads/main/apis.yml
@@ -98,6 +105,8 @@ apis:
   humanURL: https://www.zoho.com/invoice/api/v3/introduction
   baseURL: https://www.zohoapis.com/invoice/v3
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
