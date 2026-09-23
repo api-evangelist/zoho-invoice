@@ -1,11 +1,7 @@
 {
   "provider": "zoho-invoice",
   "sources": [
-    "zoho-invoice-contacts-api-openapi.yml",
-    "zoho-invoice-credit-notes-api-openapi.yml",
-    "zoho-invoice-estimates-api-openapi.yml",
-    "zoho-invoice-invoices-api-openapi.yml",
-    "zoho-invoice-organizations-api-openapi.yml"
+    "_original/zoho-invoice-openapi.yml"
   ],
   "outputs": [
     "zoho-invoice-contacts-api-openapi.yml",
@@ -18,7 +14,48 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "zoho-invoice-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "zoho-invoice-openapi.yml: tagged paths GET /organizations -> Organizations",
+    "zoho-invoice-openapi.yml: tagged paths POST /organizations -> Organizations",
+    "zoho-invoice-openapi.yml: tagged paths GET /contacts -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths POST /contacts -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths GET /contacts/{contact_id} -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths PUT /contacts/{contact_id} -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths DELETE /contacts/{contact_id} -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths POST /contacts/{contact_id}/portal -> Contacts",
+    "zoho-invoice-openapi.yml: tagged paths GET /invoices -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths POST /invoices -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths GET /invoices/{invoice_id} -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths PUT /invoices/{invoice_id} -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths DELETE /invoices/{invoice_id} -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths POST /invoices/{invoice_id}/send -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths POST /invoices/{invoice_id}/void -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths POST /invoices/{invoice_id}/email -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths GET /invoices/{invoice_id}/payments -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths POST /invoices/{invoice_id}/payments -> Invoices",
+    "zoho-invoice-openapi.yml: tagged paths GET /estimates -> Estimates",
+    "zoho-invoice-openapi.yml: tagged paths POST /estimates -> Estimates",
+    "zoho-invoice-openapi.yml: tagged paths GET /estimates/{estimate_id} -> Estimates",
+    "zoho-invoice-openapi.yml: tagged paths PUT /estimates/{estimate_id} -> Estimates",
+    "zoho-invoice-openapi.yml: tagged paths DELETE /estimates/{estimate_id} -> Estimates",
+    "zoho-invoice-openapi.yml: tagged paths GET /credit-notes -> Credit Notes",
+    "zoho-invoice-openapi.yml: tagged paths POST /credit-notes -> Credit Notes",
+    "zoho-invoice-openapi.yml: tagged paths GET /credit-notes/{creditnote_id} -> Credit Notes",
+    "zoho-invoice-openapi.yml: tagged paths PUT /credit-notes/{creditnote_id} -> Credit Notes",
+    "zoho-invoice-openapi.yml: tagged paths DELETE /credit-notes/{creditnote_id} -> Credit Notes",
+    "zoho-invoice-openapi.yml: declared missing tag: Contacts",
+    "zoho-invoice-openapi.yml: declared missing tag: Credit Notes",
+    "zoho-invoice-openapi.yml: declared missing tag: Estimates",
+    "zoho-invoice-openapi.yml: declared missing tag: Invoices",
+    "zoho-invoice-openapi.yml: declared missing tag: Organizations",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "zoho-invoice-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-invoice-credit-notes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-invoice-estimates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-invoice-invoices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zoho-invoice-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
