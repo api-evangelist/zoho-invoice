@@ -1,0 +1,34 @@
+slug: zoho-invoice
+provider: Zoho Invoice
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Invoices
+  spec_file: zoho-invoice-invoices-api-openapi.yml
+  capability_id: BC-200.30
+  capability_id_l1: BC-200
+  capability_name: Accounts Receivable Management
+  confidence: 0.9
+  evidence: POST /invoices/{invoice_id}/email 'Email an invoice'; POST /invoices/{invoice_id}/payments
+    'Apply a payment to an invoice'
+  reason: Customer invoice issuance, voiding and cash application is Accounts Receivable Management.
+- tag: Credit Notes
+  spec_file: zoho-invoice-credit-notes-api-openapi.yml
+  capability_id: BC-200.30
+  capability_id_l1: BC-200
+  capability_name: Accounts Receivable Management
+  confidence: 0.82
+  evidence: POST /credit-notes createCreditNote 'Create a credit note' in an API 'covering contacts, invoices,
+    estimates, and credit notes'
+  reason: Customer credit notes are adjustments to customer invoicing/receivables, squarely Accounts Receivable
+    Management in a small-business invoicing product.
